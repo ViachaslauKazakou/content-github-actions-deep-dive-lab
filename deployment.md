@@ -149,6 +149,7 @@ jobs:
           npm run build
       - name: deploy files to bucket
         run: aws s3 cp public s3://${{ env.BUCKET_NAME }} --recursive --acl public-read
+
 Note: Be sure to replace <Production bucket name here> with the name of your Production S3 bucket.
 
 In the code editor's SSH terminal, save and commit your changes to production.yaml:
