@@ -187,7 +187,9 @@ In the index.js file editor, add an <h4> code block below the <h1> </h1> code bl
 In the code editor's SSH terminal, commit your changes:
 git add --a
 git commit -m 'added launch date header'
+
 After you commit your changes, push them:
+
 git push --set-upstream origin feature-launch-date
 Verify the Website Updates
 Navigate back to your forked GitHub repository and verify the workflow update triggered an action. Since this update is for a feature branch, it should have triggered your non-Production workflow.
