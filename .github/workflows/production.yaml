@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      BUCKET_NAME: static-file-bucket-223651188
+      BUCKET_NAME: learn-github-production-230220221722
     steps:
       - name: Check out code
         uses: actions/checkout@v2
