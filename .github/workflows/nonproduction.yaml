@@ -30,3 +30,12 @@ jobs:
           npm run build
       - name: deploy files to bucket
         run: aws s3 cp public s3://${{ env.BUCKET_NAME }} --recursive --acl public-read
+      - name: Zip bundle
+        run: |
+          cd src
+          zip -r ../${{ github.sha }}.zip .
+      - name: Archive artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: zipped-bundle
+          path: ${{ github.sha }}.zip
